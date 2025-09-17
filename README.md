@@ -5,7 +5,7 @@ This project is developed for the Machine Learning exam at University of Cagliar
 - Author: Andrea Labelli
 - Supervisor: Prof. Battista Biggio
 
-## 📌 Overview
+## Overview
 This project focuses on fake news classification using different machine learning models and text representation techniques.
 We use the Fake and Real News Dataset available on [Kaggle](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
 , which contains two CSV files:
@@ -19,7 +19,7 @@ The main objective is to explore text preprocessing, feature extraction, and mod
 - Open the file uploaded in the repo
 - Upload the two files Fake.csv and Real.csv
 
-## ⚙️ Implementation
+## Implementation
 ### Text Preprocessing 
 - Stopword removal
 - Lemmatization
@@ -60,14 +60,14 @@ $\large F_1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precisio
 
 F1-score is the harmonic mean of Precision and Recall.
 
-## 📊 Results
+## Results
 - TF-IDF representation consistently produced the best results across all models.
 - Naive Bayes + TF-IDF performed particularly well, reaching very high precision and recall.
 - SVM also showed excellent performance, although more computationally expensive.
 - Simpler representations like TokenizerStats were less effective, but still useful for comparison.
 - Confusion matrices showed that both classes (Fake and True) were classified with high reliability.
 
-## 🚀 Key Takeaways
+## Key Takeaways
 - Machine learning models can classify fake vs true news with very high accuracy when using well-prepared text features.
 - TF-IDF remains the most reliable representation for traditional ML models in text classification tasks.
 - Even simple algorithms like Naive Bayes can achieve excellent performance with the right features.
