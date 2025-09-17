@@ -42,23 +42,23 @@ Each model was trained on all three data representations, and then evaluated.
 ### Evaluation Metrics
 To measure performance, we used Precision, Recall, and F1-score, which are common in classification tasks.
 
-- Precision
+- Average precision
 
 $\large\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}$
 
-Measures how many of the articles classified as fake were actually fake.
+Precision measures how many of the articles classified as fake were actually fake.
 
-- Recall
+- Average recall
 
 $\large\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}$
 
-Measures how many of the actual positives were correctly identified.
+Recall measures how many of the actual positives were correctly identified.
 
-- F1-score
+- Average F1-score
 
 $\large F_1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \text{Recall}}$
 
-It is the harmonic mean of Precision and Recall.
+F1-score is the harmonic mean of Precision and Recall.
 
 ## 📊 Results
 - TF-IDF representation consistently produced the best results across all models.
