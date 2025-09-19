@@ -37,7 +37,14 @@ The main objective is to explore text preprocessing, feature extraction, and mod
 - Random Forest
 - Support Vector Machine (SVM)
 
-Each model was trained on all three data representations, and then evaluated.
+Each classifier was trained and tested using both simple train/test split and 5-fold cross validation.
+
+In the 5-fold cross validation (K=5) computation:
+- The dataset is divided into 5 folds
+- Each fold is used once as a test set, while the remaining 4 folds are used for training.
+- The process is repeated 5 times, and results are averaged.
+- Simple split gives performance for only one partition of the data (risk of bias).
+- K-Fold CV provides a more reliable estimate by considering multiple partitions.
 
 ### Evaluation Metrics
 To measure performance, we used Precision, Recall, and F1-score, which are common in classification tasks.
@@ -64,10 +71,11 @@ F1-score is the harmonic mean of Precision and Recall.
 - TF-IDF representation consistently produced the best results across all models.
 - Naive Bayes + TF-IDF performed particularly well, reaching very high precision and recall.
 - SVM also showed excellent performance, although more computationally expensive.
-- Simpler representations like TokenizerStats were less effective, but still useful for comparison.
+- TokenizerStatistics performs significantly worse — useful for baseline but not competitive when vocabulary and term weighting are available.
 - Confusion matrices showed that both classes (Fake and True) were classified with high reliability.
 
 ## Key Takeaways
-- Machine learning models can classify fake vs true news with very high accuracy when using well-prepared text features.
-- TF-IDF remains the most reliable representation for traditional ML models in text classification tasks.
-- Even simple algorithms like Naive Bayes can achieve excellent performance with the right features.
+- Feature representation matters as much as the choice of classifier.
+- TF-IDF is the most effective representation for linear models (SVM, Perceptron).
+- Naive Bayes is strong and efficient with Count Vectorizer.
+- Cross validation ensures that results are not dependent on a lucky or unlucky split.
