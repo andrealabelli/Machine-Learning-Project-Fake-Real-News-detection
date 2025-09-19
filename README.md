@@ -70,9 +70,9 @@ F1-score is the harmonic mean of Precision and Recall.
 ## Results
 - TF-IDF representation consistently produced the best results across all models.
 - Naive Bayes + TF-IDF performed particularly well, reaching very high precision and recall.
-- SVM also showed excellent performance, although more computationally expensive.
+- SVM and Perceptron achieved top results with TF-IDF, leveraging better feature scaling.
 - TokenizerStatistics performs significantly worse — useful for baseline but not competitive when vocabulary and term weighting are available.
-- Confusion matrices showed that both classes (Fake and True) were classified with high reliability.
+- Confusion matrix showed that both classes (Fake and True) were classified with high reliability by using SVM with TF-IDF Vectorization.
 
 ## Key Takeaways
 - Feature representation matters as much as the choice of classifier.
