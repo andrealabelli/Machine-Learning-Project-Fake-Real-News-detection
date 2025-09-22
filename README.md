@@ -7,7 +7,8 @@ This project is developed for the Machine Learning exam at University of Cagliar
 
 ## Overview
 This project focuses on fake news classification using different machine learning models and text representation techniques.
-We use the Fake and Real News Dataset available on [Kaggle](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
+
+Were used the Fake and Real News Dataset available on [Kaggle](https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset)
 , which contains two CSV files:
 
 - Fake.csv -> collection of fake news articles
@@ -29,7 +30,7 @@ The main objective is to explore text preprocessing, feature extraction, and mod
 ### Data Representations tested:
 - Tokenizer-based statistics -> Statistical features extracted from tokenized sequences (average token index, frequency, etc.).
 - Count Vectorizer -> Bag-of-Words representation (word counts).
-- TF-IDF Vectorizer -> Term Frequency - Inverse Document Frequency representation (weighted word importance).
+- TF-IDF Vectorizer -> Term Frequency - Inverse Document Frequency representation (weighted word importance across all articles).
 
 ### Models compared:
 - Naive Bayes
